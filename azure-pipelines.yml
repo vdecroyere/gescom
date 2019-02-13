@@ -21,7 +21,8 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- task: PublishPipelineArtifact@0
+# Publish Artifacts
+- task: PublishBuildArtifacts@1
   inputs:
-    artifactName: 'app'
-    targetPath: '$(System.DefaultWorkingDirectory)/dist'
+    artifactName: dist
+    pathtoPublish: 'dist'
