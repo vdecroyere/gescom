@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '8.x'
+    versionSpec: '10.x'
   displayName: 'Install Node.js'
 
 - script: |
@@ -21,6 +21,7 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@0
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
+    artifactName: 'app'
+    targetPath: '$(System.DefaultWorkingDirectory)/dist'
