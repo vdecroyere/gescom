@@ -1,0 +1,29 @@
+<clr-header class="header-5">
+  <div class="branding">
+      <a class="nav-link" routerLink="home">
+          <clr-icon shape="lightbulb" class="is-inverse"></clr-icon>
+          <span class="title">Gestion des Compétences</span>
+      </a>
+  </div>
+  <form [formGroup]="searchForm" class="search">
+    <label>
+        <input [formControl]="search_input" type="text" placeholder="Search for keywords...">
+    </label>
+  </form>
+  <div class="header-actions">
+      <a class="nav-link nav-icon" routerLink="preferences" routerLinkActive="active">
+          <clr-icon shape="cog"></clr-icon>
+      </a>
+      <clr-dropdown>
+          <button class="nav-icon" clrDropdownTrigger>
+              <clr-icon shape="user"></clr-icon>
+              <clr-icon shape="caret down"></clr-icon>
+          </button>
+          <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+              <a href="..." clrDropdownItem>A propos</a>
+              <a href="..." clrDropdownItem>Préférences</a>
+              <a href="..." clrDropdownItem>Déconnexion</a>
+          </clr-dropdown-menu>
+      </clr-dropdown>
+  </div>
+</clr-header>
