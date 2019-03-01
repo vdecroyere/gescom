@@ -1,4 +1,4 @@
-<nav class="subnav">
+<!--<nav class="subnav">
   <ul class="nav">
       <li class="nav-item">
           <a class="nav-link" routerLink="../dashboard" routerLinkActive="active">Dashboard</a>
@@ -10,4 +10,15 @@
           <a class="nav-link" routerLink="../myskills" routerLinkActive="active">Mes compétences</a>
       </li>
   </ul>
-</nav>
+</nav> -->
+<clr-tabs class="subnav">
+  <clr-tab>
+    <button class="nav-link" clrTabLink routerLink="../dashboard" routerLinkActive="active">Dashboard</button>
+  </clr-tab>
+  <clr-tab>
+    <button class="nav-link" clrTabLink routerLink="../myclass" routerLinkActive="active">Ma classe</button>
+  </clr-tab>
+  <clr-tab>
+    <button class="nav-link" clrTabLink routerLink="../myskills" routerLinkActive="active">Mes compétences</button>
+  </clr-tab>
+</clr-tabs>

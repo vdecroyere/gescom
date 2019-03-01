@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ClarityModule } from '@clr/angular';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -11,6 +12,7 @@ import { DashboardMySkillsComponent } from './components/dashboard-my-skills/das
   declarations: [DashboardComponent, DashboardNavComponent, DashboardMyClassComponent, DashboardMySkillsComponent],
   imports: [
     CommonModule,
+    ClarityModule,
     DashboardRoutingModule
   ]
 })
